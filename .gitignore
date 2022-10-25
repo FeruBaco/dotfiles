@@ -1,0 +1,12 @@
+# MacOS
+
+# Karabiner
+/mac/karabiner/automatic_backups
+/mac/karabiner/assets
+
+# Common
+
+# Compiled zsh
+shell/zsh/**/**.zwc
+shell/zsh/**/**.zwc.old
+shell/zsh/.zim
