@@ -73,6 +73,7 @@ return require('packer').startup(function(use)
   use 'windwp/nvim-ts-autotag'
 
   use 'lewis6991/gitsigns.nvim'
+  use({ 'kylechui/nvim-surround', branch = 'main' })
 
   if packer_bootstrap then
     require('packer').sync()
