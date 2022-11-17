@@ -12,9 +12,12 @@ alias g='git'
 alias gco='git checkout'
 alias gs='git status -sb'
 
+# Tmux
+#alias tmux='tmux -f "$HOME/.config/tmux/tmux.conf"'
+
 # Extras
 alias vi='nvim'
-alias vim= 'nvim'
+alias vim='nvim'
 # alias copy='pbcopy'
 # alias c .='code .'
 # alias o.='open .'
