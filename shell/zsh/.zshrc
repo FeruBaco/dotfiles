@@ -50,5 +50,7 @@ eval "$(starship init zsh)"
 
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
+
 # Created by `pipx` on 2023-03-15 15:54:28
 export PATH="$PATH:/Users/feru/.local/bin"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
