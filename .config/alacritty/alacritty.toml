@@ -1,0 +1,26 @@
+import = ["/Users/feru/.config/alacritty/dracula.toml"]
+
+[font]
+size = 14
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[window]
+dynamic_padding = true
+decorations = "none"
+opacity = 0.90
+
+[window.padding]
+x = 7
+y = 0
+
+[cursor]
+style = { shape = "Block", blinking = "Always" }
+blink_interval = 600
+
+[keyboard]
+bindings = [
+	{ key = "Right", mods = "Alt", chars = "\u001BF" },
+	{ key = "Left", mods = "Alt", chars = "\u001BB" },
+]
