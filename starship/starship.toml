@@ -1,3 +1,4 @@
+
 [aws]
 symbol = "  "
 
@@ -32,13 +33,13 @@ symbol = " "
 symbol = " "
 
 [memory_usage]
-symbol = " "
+symbol = "󰍛 "
 
 [nodejs]
 symbol = " "
 
 [package]
-symbol = " "
+symbol = "󰏗 "
 
 [python]
 symbol = " "
