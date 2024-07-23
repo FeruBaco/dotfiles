@@ -8,6 +8,7 @@ brew "neovim"
 brew "starship"
 brew "tldr"
 brew "z"
+brew "zsh-autosuggestions"
 
 cask "amethyst"
 cask "discord"
