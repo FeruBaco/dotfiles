@@ -2,8 +2,8 @@
 **/.DS_Store
 
 # Karabiner
-/mac/karabiner/automatic_backups
-/mac/karabiner/assets
+/karabiner/automatic_backups
+/karabiner/assets
 
 # Common
 
