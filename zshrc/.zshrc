@@ -1,7 +1,12 @@
 export DOTFILES_PATH="/Users/feru/.dotfiles"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# ZSH Autosuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/etc/profile.d/z.sh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+setopt HIST_IGNORE_ALL_DUPS # Ignore history duplicates
+
 
 # Adding Starship theme
 eval "$(starship init zsh)"
@@ -17,7 +22,7 @@ export LANG=en_US.UTF-8
 # Aliases
 
 alias la=tree
-alias cat=bat
+# alias cat=bat
 
 # List
 

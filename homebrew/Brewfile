@@ -9,6 +9,7 @@ brew "starship"
 brew "tldr"
 brew "z"
 brew "zsh-autosuggestions"
+brew "stow"
 
 cask "amethyst"
 cask "discord"
