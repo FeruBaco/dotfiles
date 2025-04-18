@@ -3,3 +3,7 @@
 	name = Feru
 [init]
 	defaultBranch = main
+[pull]
+	ff = only
+[credential]
+	helper = store
