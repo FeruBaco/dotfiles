@@ -1,4 +1,4 @@
-export DOTFILES_PATH="/Users/feru/.dotfiles"
+export DOTFILES_PATH="$HOME/.dotfiles"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 setopt HIST_IGNORE_ALL_DUPS # Ignore history duplicates
@@ -32,9 +32,9 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
-# export NVM_DIR="$HOME/.config/nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # Aliases
 
 alias la=tree
@@ -59,11 +59,11 @@ alias vim='nvim'
 export PATH=$HOME/development/flutter/bin:$PATH
 export PATH="/opt/homebrew/opt/php@8.2/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-# export FLUTTER_ROOT="~/development/flutter"
-# export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
-# export ANDROID_HOME=$HOME/Library/Android/sdk
-# export PATH=$PATH:$ANDROID_HOME/emulator
-# export PATH=$PATH:$ANDROID_HOME/platform-tools
+export FLUTTER_ROOT="~/development/flutter"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 
 # Functions 

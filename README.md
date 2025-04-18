@@ -2,11 +2,18 @@
 
 Personal configuration files. 👋
 
-### Homebrew installation:
-
+### Run Stow!!! 🐄
 ```bash
-# Leaving a machine (waiting for..)
+# Create and/or update configuration files and symbolic links
+sh ./setup.sh
+```
 
-# Fresh installation
+
+### Fresh installation (macOS)
+```bash
+# Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install brew packages
 brew bundle install --file=~/.dotfiles/mac/brew/Brewfile
 ```
