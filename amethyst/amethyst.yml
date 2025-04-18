@@ -4,7 +4,7 @@ disable-padding-on-builtin-display: true
 # window margins
 window-margins: true
 smart-window-margins: false
-window-margin-size: 4
+window-margin-size: 0
 
 # floating list
 floating-is-blacklist: true
@@ -13,7 +13,6 @@ floating:
     "com.apple.systempreferences",
     "org.pqrs.Karabiner-Elements.Settings",
     "org.pqrs.Karabiner-EventViewer",
-    "com.Balatro.localthunk",
   ]
 
 ignore-menu-bar: true
@@ -23,6 +22,7 @@ mouse-follows-focus: true
 layouts:
   # - tall
   - fullscreen
+  - widescreen-tall
   # - tall-right
   # - wide
   # - two-pane
@@ -35,7 +35,6 @@ layouts:
   # - column
   # - row
   # - floating
-  - widescreen-tall
   # - widescreen-tall-right
   # - bsp
 
