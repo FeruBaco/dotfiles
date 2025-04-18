@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 
 return {
 	color_scheme = 'Dracula (Official)',
-	enable_tab_bar = false,
+	enable_tab_bar = true,
 	font_size = 14.0,
 	font = wezterm.font('JetBrains Mono'),
 	-- macos_window_background_blur = 40,
