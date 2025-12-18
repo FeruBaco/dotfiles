@@ -7,6 +7,6 @@
 --ignore=mac
 
 if [[ "$OSTYPE" != "darwin"* ]]; then
-  --ignore=amethyst
   --ignore=karabiner
+  --ignore=aerospace
 fi

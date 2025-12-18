@@ -1,4 +1,7 @@
+export LC_ALL=en_US.UTF-8
 export DOTFILES_PATH="$HOME/.dotfiles"
+export XDG_CONFIG_HOME="$HOME/.config"
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 setopt HIST_IGNORE_ALL_DUPS # Ignore history duplicates
@@ -56,15 +59,16 @@ alias gs='git status -sb'
 alias vi='nvim'
 alias vim='nvim'
 
-export PATH=$HOME/development/flutter/bin:$PATH
 export PATH="/opt/homebrew/opt/php@8.2/bin:$PATH"
-export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export FLUTTER_ROOT="~/development/flutter"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+export PATH=$PATH:$HOME/.config/emacs/bin
+
+# Java manage
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-21.jdk/Contents/Home
 
 # Functions 
 
@@ -78,3 +82,6 @@ function export_brew_apps() {
   brew bundle dump --file="$HOMEBREW_BUNDLE_FILE_PATH" --force
   echo 'Brew apps exported!'
 }
+
+. "$HOME/.local/bin/env"
+eval "$(pyenv init --path)"

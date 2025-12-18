@@ -1,5 +1,4 @@
 {
-    "global": { "show_in_menu_bar": false },
     "profiles": [
         {
             "complex_modifications": {
@@ -10,22 +9,6 @@
                     "basic.to_if_held_down_threshold_milliseconds": 100
                 },
                 "rules": [
-                    {
-                        "description": "Open vscode",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "v",
-                                    "modifiers": {
-                                        "mandatory": ["left_control", "left_option", "left_command"],
-                                        "optional": ["left_shift"]
-                                    }
-                                },
-                                "to": [{ "shell_command": "open -a 'Visual Studio Code.app'" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
                     {
                         "manipulators": [
                             {
@@ -40,6 +23,43 @@
                                         "modifiers": ["left_command", "left_control", "left_option"]
                                     }
                                 ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Change left_control+hjkl to arrow keys",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": { "mandatory": ["left_control", "left_option", "left_command", "left_shift"] }
+                                },
+                                "to": [{ "key_code": "left_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "mandatory": ["left_control", "left_option", "left_command", "left_shift"] }
+                                },
+                                "to": [{ "key_code": "down_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": ["left_control", "left_option", "left_command", "left_shift"] }
+                                },
+                                "to": [{ "key_code": "up_arrow" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "mandatory": ["left_control", "left_option", "left_command", "left_shift"] }
+                                },
+                                "to": [{ "key_code": "right_arrow" }],
                                 "type": "basic"
                             }
                         ]
@@ -64,11 +84,27 @@
                         ]
                     },
                     {
-                        "description": "Ctrl + Opt + cmd + space => Open iTerm",
+                        "description": "Ctrl + Opt + Cmd + C => Code",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "spacebar",
+                                    "key_code": "c",
+                                    "modifiers": {
+                                        "mandatory": ["left_control", "left_option", "left_command"],
+                                        "optional": ["left_shift"]
+                                    }
+                                },
+                                "to": [{ "shell_command": "open -a 'Visual Studio Code.app'" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Ctrl + Opt + Cmd + T => Terminal",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "t",
                                     "modifiers": {
                                         "mandatory": ["left_control", "left_option", "left_command"],
                                         "optional": ["left_shift"]
@@ -80,11 +116,11 @@
                         ]
                     },
                     {
-                        "description": "Open chrome or brave",
+                        "description": "Ctrl + Opt + Cmd + B => Browser",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "c",
+                                    "key_code": "b",
                                     "modifiers": {
                                         "mandatory": ["left_control", "left_option", "left_command"],
                                         "optional": ["left_shift"]
@@ -96,74 +132,49 @@
                         ]
                     },
                     {
-                        "description": "Change left_control+hjkl to arrow keys",
+                        "description": "Ctrl + Opt + Cmd + F => Finder",
                         "manipulators": [
                             {
-                                "conditions": [
-                                    {
-                                        "identifiers": [
-                                            { "vendor_id": 1133 },
-                                            { "vendor_id": 1452 }
-                                        ],
-                                        "type": "device_if"
-                                    }
-                                ],
                                 "from": {
-                                    "key_code": "h",
-                                    "modifiers": { "mandatory": ["left_control"] }
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "mandatory": ["left_control", "left_option", "left_command"],
+                                        "optional": ["left_shift"]
+                                    }
                                 },
-                                "to": [{ "key_code": "left_arrow" }],
+                                "to": [{ "shell_command": "open -a 'Finder.app'" }],
                                 "type": "basic"
-                            },
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Ctrl + Opt + Cmd + O => Obsidian",
+                        "manipulators": [
                             {
-                                "conditions": [
-                                    {
-                                        "identifiers": [
-                                            { "vendor_id": 1133 },
-                                            { "vendor_id": 1452 }
-                                        ],
-                                        "type": "device_if"
-                                    }
-                                ],
                                 "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["left_control"] }
+                                    "key_code": "o",
+                                    "modifiers": {
+                                        "mandatory": ["left_control", "left_option", "left_command"],
+                                        "optional": ["left_shift"]
+                                    }
                                 },
-                                "to": [{ "key_code": "down_arrow" }],
+                                "to": [{ "shell_command": "open -a 'Obsidian.app'" }],
                                 "type": "basic"
-                            },
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Ctrl + Opt + Cmd + M => Spotify",
+                        "manipulators": [
                             {
-                                "conditions": [
-                                    {
-                                        "identifiers": [
-                                            { "vendor_id": 1133 },
-                                            { "vendor_id": 1452 }
-                                        ],
-                                        "type": "device_if"
-                                    }
-                                ],
                                 "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["left_control"] }
-                                },
-                                "to": [{ "key_code": "up_arrow" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [
-                                            { "vendor_id": 1133 },
-                                            { "vendor_id": 1452 }
-                                        ],
-                                        "type": "device_if"
+                                    "key_code": "m",
+                                    "modifiers": {
+                                        "mandatory": ["left_control", "left_option", "left_command"],
+                                        "optional": ["left_shift"]
                                     }
-                                ],
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["left_control"] }
                                 },
-                                "to": [{ "key_code": "right_arrow" }],
+                                "to": [{ "shell_command": "open -a 'Spotify.app'" }],
                                 "type": "basic"
                             }
                         ]
