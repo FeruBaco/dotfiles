@@ -1,13 +1,14 @@
 --target=~/.config
 
---ignore=.stowrc
 --ignore=DS_Store
---ignore=zshrc
+--ignore=.stowrc
 --ignore=setup.sh
+
+--ignore=aerospace
 --ignore=git
 --ignore=mac
+--ignore=zshrc
 
 if [[ "$OSTYPE" != "darwin"* ]]; then
-  --ignore=aerospace
   --ignore=karabiner
 fi
