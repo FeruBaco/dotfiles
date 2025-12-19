@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+export DOTFILES_PATH="$HOME/dotfiles"
+
 stow .
 
 ln -sf $DOTFILES_PATH/git/.gitconfig ~/.gitconfig
