@@ -1,5 +1,4 @@
-export DOTFILES_PATH="$HOME/.dotfiles"
-eval "$(/opt/homebrew/bin/brew shellenv)"
+export DOTFILES_PATH="$HOME/dotfiles"
 
 setopt HIST_IGNORE_ALL_DUPS # Ignore history duplicates
 setopt HIST_FCNTL_LOCK
