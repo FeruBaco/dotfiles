@@ -1,9 +1,17 @@
 [user]
-	email = f1nandocor@gmail.com
-	name = Feru
+  email = f1nandocor@gmail.com
+	name = Fernando
 [init]
 	defaultBranch = main
 [pull]
 	ff = only
 [credential]
 	helper = store
+[core]
+	autocrlf = input
+
+[includeIf "gitdir:~/Desktop/Nova/"]
+    path = ~/.gitconfig-nova
+
+[includeIf "gitdir:~/dd/"]
+    path = ~/.gitconfig-nova
