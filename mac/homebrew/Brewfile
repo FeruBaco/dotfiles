@@ -1,5 +1,4 @@
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
 
 brew "colima"
 brew "docker"
@@ -15,7 +14,7 @@ brew "zsh-syntax-highlighting"
 brew "zsh-history-substring-search"
 brew "zsh-completions"
 
-cask "amethyst"
+cask "nikitabobko/tap/aerospace"
 cask "discord"
 cask "font-jetbrains-mono-nerd-font"
 cask "karabiner-elements"
