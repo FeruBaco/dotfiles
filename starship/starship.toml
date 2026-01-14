@@ -1,4 +1,12 @@
 
+add_newline = false
+
+[character]
+success_symbol = "[➜](bold green)"
+
+[line_break]
+disabled = false
+
 [aws]
 symbol = "  "
 
@@ -9,7 +17,7 @@ symbol = " "
 symbol = " "
 
 [directory]
-read_only = " "
+read_only = "  "
 
 [docker_context]
 symbol = " "
@@ -43,7 +51,6 @@ symbol = "󰏗 "
 
 [python]
 symbol = " "
-
 
 [ruby]
 symbol = " "
