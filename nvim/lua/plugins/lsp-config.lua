@@ -11,7 +11,7 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",
-					"tsserver",
+					"ts_ls",
 					"emmet_ls",
           "html",
           "cssls",
@@ -23,13 +23,15 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({})
-			lspconfig.tsserver.setup({
+			vim.lsp.config('lua_ls', {})
+			vim.lsp.config('ts_ls', {
 				-- on_attach = function(client)
 				-- 	client.resolved_capabilities.document_formatting = false
 				-- end,
 			})
+
+			vim.lsp.enable('lua_ls')
+			vim.lsp.enable('ts_ls')
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
