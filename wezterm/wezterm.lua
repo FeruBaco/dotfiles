@@ -13,7 +13,10 @@ return {
 		{
 			key = 'k',
 			mods = 'SUPER',
-			action = wezterm.action.ClearScrollback 'ScrollbackAndViewport',
+			action = wezterm.action.Multiple {
+				wezterm.action.ClearScrollback 'ScrollbackAndViewport',
+				wezterm.action.SendKey { key = 'L', mods = 'CTRL' },
+			},
 		},
 		{
 			key = 'LeftArrow',
