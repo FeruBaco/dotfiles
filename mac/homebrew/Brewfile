@@ -5,7 +5,7 @@ brew "docker"
 brew "git"
 brew "neovim"
 brew "starship"
-brew "tldr"
+brew "tlrc"
 brew "stow"
 brew "z"
 

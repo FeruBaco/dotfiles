@@ -17,8 +17,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # nova
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-21.jdk/Contents/Home
-eval "$(pyenv init --path)"
+export JAVA_HOME=$(/usr/libexec/java_home -v 21)
+# eval "$(pyenv init --path)"
 
 
 # export PATH=$PATH:$HOME/.config/emacs/bin

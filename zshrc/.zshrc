@@ -1,6 +1,10 @@
 setopt HIST_IGNORE_ALL_DUPS # Ignore history duplicates
 setopt HIST_FCNTL_LOCK
 
+# Adding Starship theme
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
+eval "$(starship init zsh)"
+
 # ZSH plugins
 BREW_PREFIX="$(brew --prefix)"
 source "$BREW_PREFIX/etc/profile.d/z.sh"
@@ -20,14 +24,11 @@ ZSH_AUTOSUGGEST_USE_ASYNC=true
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
-# Adding Starship theme
-export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
-eval "$(starship init zsh)"
 
 # nvm
 export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion/d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # Aliases
 alias ls='ls -p -G'
@@ -52,3 +53,4 @@ function export_brew_apps() {
 }
 
 command -v pyenv >/dev/null && eval "$(pyenv init -)"
+export PATH="$HOME/.local/bin:$PATH"
